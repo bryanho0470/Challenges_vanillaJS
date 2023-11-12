@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Todo dashboard</title>
+  </head>
+  <body class="body_screen">
+    <div class="contents">
+      <form id="login-form">
+        <input
+          maxlength="15"
+          type="text"
+          placeholder="what is your name?"
+          required
+        />
+        <button>Log in</button>
+      </form>
+
+      <form id="clear-form">
+        <h1 id="greeting" class="hidden"></h1>
+        <button id="clearbtn" class="hidden">Clear</button>
+      </form>
+
+      <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h2 id="clock">00:00</h2>
+
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+
+      <form id="todo-form">
+        <input
+          id="todo-input"
+          placeholder="Put in here what you need to do"
+          required
+        />
+        <button id="todo-button">Add</button>
+      </form>
+      <ul class="todo_container"></ul>
+    </div>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/todo.js"></script>
+  </body>
+</html>

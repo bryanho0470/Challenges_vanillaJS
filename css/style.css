@@ -1,0 +1,131 @@
+#background_image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+#todo-list {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.contents {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body_screen {
+  display: flex;
+}
+
+.todo_container {
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 40%;
+  background-color: white;
+  border-radius: 15px;
+}
+/* Customize the label (the container) */
+.todo_set {
+  margin: 15px;
+  display: flex;
+  color: black;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.todo_set input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.todo_set button {
+  position: absolute;
+  right: 5px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.todo_set:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.todo_set input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.todo_set input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.todo_set span {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.todo_set .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.todo_set input:checked ~ span {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+ul {
+  padding-inline-start: 10px;
+}
